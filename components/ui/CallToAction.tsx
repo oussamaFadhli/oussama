@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+
+type CubicBezierArray = [number, number, number, number];
+
 interface HandWrittenTitleProps {
     title?: string;
     subtitle?: string;
@@ -16,7 +19,7 @@ export default function HandWrittenTitle({
             pathLength: 1,
             opacity: 1,
             transition: {
-                pathLength: { duration: 2.5, ease: [0.43, 0.13, 0.23, 0.96] as any },
+                pathLength: { duration: 2.5, ease: [0.43, 0.13, 0.23, 0.96] as CubicBezierArray },
                 opacity: { duration: 0.5 },
             },
         },
